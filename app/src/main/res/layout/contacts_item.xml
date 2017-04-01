@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="73dp"
+        android:textStyle="bold"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="14dp"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profilepic"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/profile_pic_dummy" />
+
+    <TextView
+        android:id="@+id/last_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="last update"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:layout_marginBottom="6dp"
+        android:layout_alignBottom="@+id/profilepic"
+        android:layout_alignLeft="@+id/contact_name"
+        android:layout_alignStart="@+id/contact_name" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:background="#D3D3D3"
+        android:layout_height="1dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginRight="35dp"
+        android:layout_below="@+id/profilepic"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:text="2 day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/contact_name"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="23dp"
+        android:layout_marginEnd="23dp"
+        android:id="@+id/date" />
+
+</RelativeLayout>

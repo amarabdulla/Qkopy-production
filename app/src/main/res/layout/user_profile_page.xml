@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:id="@+id/navigation_drawer_account_section"
+        android:layout_width="match_parent"
+        android:gravity="left"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="@dimen/nav_drawer_vertical_spacing_listing"
+        android:background="@color/colorWhite"
+        android:paddingEnd="@dimen/nav_drawer_vertical_keyline_right"
+        android:paddingLeft="@dimen/nav_drawer_vertical_keyline_icon_left"
+        android:paddingRight="@dimen/nav_drawer_vertical_keyline_right"
+        android:paddingStart="@dimen/nav_drawer_vertical_keyline_icon_left">
+
+        <LinearLayout
+            android:id="@+id/navigation_drawer_account_information"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/navigation_drawer_account_information_height"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_marginLeft="140dp"
+                style="@style/NavDrawerAccountInfoText"
+                android:text="rohit"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:textSize="18sp"
+                android:textColor="@android:color/darker_gray"
+                tools:fontFamily="sans-serif-medium"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/number"
+            style="@style/NavDrawerAccountInfoText"
+            android:text="5555555555"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/darker_gray"
+            tools:fontFamily="sans-serif-medium"
+            android:textSize="15sp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/navigation_drawer_user_account_picture_profile"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:src="@drawable/profile_pic_holder"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+</RelativeLayout>

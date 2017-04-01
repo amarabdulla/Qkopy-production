@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:background="#c9e9f4">
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/fab"
+        android:layout_marginBottom="20dp"
+        android:divider="@null"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/empty_img"
+        android:layout_width="245dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="136dp"
+        android:background="@drawable/empty_feed_bg" />
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/post_button"
+        android:layout_gravity="bottom|end"
+        fab:fab_colorNormal="@color/colorPrimary"
+        android:layout_alignTop="@+id/number"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="145dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp" />
+    <TextView
+        android:id="@+id/empty_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/empty_img"
+        android:layout_marginBottom="21dp"
+        android:layout_toEndOf="@+id/list"
+        android:layout_toRightOf="@+id/list"
+        android:gravity="center"
+        android:text="@string/empty_msg_feed"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</FrameLayout>

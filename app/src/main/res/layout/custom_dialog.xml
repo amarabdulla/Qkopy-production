@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/myRadioGroup"
+        android:checkedButton="@+id/rd_ome" >
+    <RadioButton
+        android:id="@+id/rd_ome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/colorPrimary"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Public" />
+
+    <RadioButton
+        android:id="@+id/rd_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rd_ome"
+        android:buttonTint="@color/colorPrimary"
+        android:layout_marginTop="5dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Contacts" />
+    <RadioButton
+        android:id="@+id/rd_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:buttonTint="@color/colorPrimary"
+        android:layout_below="@+id/rd_2"
+        android:text="Me" />
+</RadioGroup>
+    <Button
+        android:layout_width="fill_parent"
+        android:id="@+id/okbtn"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/myRadioGroup"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorPrimary"
+        android:layout_centerInParent="true"
+        android:text="OK" />
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#20baec</color>
+    <color name="colorPrimaryDark">#0385af</color>
+    <color name="colorAccent">#00bcd4</color>
+    <color name="colorButtonSubmit">#00bcd4</color>
+    <color name="colorWhite">#FFFEFF</color>
+    <color name="textColorGrey">#a3a3a3</color>
+
+    <color name="white">#ffffff</color>
+    <color name="feed_bg">#d3d6db</color>
+    <color name="feed_item_bg">#ffffff</color>
+    <color name="feed_item_border">#c2c3c8</color>
+    <color name="link">#0a80d1</color>
+    <color name="timestamp">#a0a3a7</color>
+
+    <color name="main">#63C3FF</color>
+    <color name="actionbar_title_color">@android:color/white</color>
+
+    <color name="purple_500">#9C27B0</color>
+    <color name="deep_purple_500">#673AB7</color>
+    <color name="indigo_500">#3F51B5</color>
+    <color name="blue_500">#2196F3</color>
+    <color name="cyan_500">#00BCD4</color>
+    <color name="light_blue_500">#03A9F4</color>
+</resources>

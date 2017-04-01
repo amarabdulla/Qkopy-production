@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:animateLayoutChanges="true"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/viewA"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/animation_list"
+        android:visibility="visible"
+        android:weightSum="1">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/navigation_drawer_user_account_picture_profile"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.01"
+            android:src="@drawable/profile_pic_holder" />
+
+        <TextView
+            android:id="@+id/number"
+            style="@style/NavDrawerAccountInfoText"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:text="919191919191"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="15sp"
+            tools:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:id="@+id/user_name"
+            style="@style/NavDrawerAccountInfoText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="95dp"
+            android:gravity="center"
+            android:text="user"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="18sp"
+            tools:fontFamily="sans-serif-medium" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/viewC"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:visibility="gone"
+        android:background="@drawable/animation_list"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/number2"
+            style="@style/NavDrawerAccountInfoText"
+            android:text="919191919191"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="15sp"
+            tools:fontFamily="sans-serif-medium"
+            android:layout_marginLeft="28dp"
+            android:layout_marginStart="28dp"
+            android:layout_below="@+id/user_name2"
+            android:layout_toRightOf="@+id/navigation_drawer_user_account_picture_profile2"
+            android:layout_toEndOf="@+id/navigation_drawer_user_account_picture_profile2" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/navigation_drawer_user_account_picture_profile2"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.01"
+            android:src="@drawable/profile_pic_holder"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/user_name2"
+            style="@style/NavDrawerAccountInfoText"
+            android:gravity="center"
+            android:text="user"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="18sp"
+            tools:fontFamily="sans-serif-medium"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_alignTop="@+id/navigation_drawer_user_account_picture_profile2"
+            android:layout_alignLeft="@+id/number2"
+            android:layout_alignStart="@+id/number2" />
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:divider="@null" />
+        <ImageView
+            android:id="@+id/empty_bg"
+            android:layout_width="195dp"
+            android:layout_height="140dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="80dp"
+            android:layout_marginRight="80dp"
+            android:background="@drawable/empty_post_add"
+            android:visibility="gone" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/post_button"
+            android:layout_gravity="bottom|end"
+            fab:fab_colorNormal="@color/colorPrimary"
+            android:layout_alignTop="@+id/number"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="145dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp" />
+        <TextView
+            android:id="@+id/empty_msg_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fab"
+            android:layout_marginLeft="14dp"
+            android:layout_marginStart="14dp"
+            android:gravity="center"
+            android:text="@string/empty_msg_one"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/empty_msg_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/empty_msg_one"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/empty_msg_two"
+            android:textColor="@android:color/darker_gray"
+            android:visibility="gone" />
+
+    </FrameLayout>
+</LinearLayout>

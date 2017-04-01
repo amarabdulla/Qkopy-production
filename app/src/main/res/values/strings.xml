@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Qkopy</string>
+    <string name="action_settings">Settings</string>
+    <string name="runtime_permissions_txt">Please enable ALL permissions from app settings.</string>
+    <string name="empty_msg_one">Hi there is no podcasts yet!.</string>
+    <string name="empty_msg_feed">No podcasts</string>
+    <string name="empty_msg_two">Upload your files by tapping</string>
+    <string name="welcome_app_info_1">The worlds fastest meassaging app
+  </string>
+    <string name="welcome_app_info_2">It is free and secure</string>
+    <string name="welcome_terms_and_condition">By accepting you accept <u>underline</u>.</string>
+    <string name="profile_pic_info">Please provide your name and optional profile photo</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="noboringactionbar_title">Beautiful picture</string>
+    <string name="loreum">Quam ob rem vita quidem talis fuit vel fortuna vel gloria, ut nihil posset accedere, moriendi</string>
+</resources>
