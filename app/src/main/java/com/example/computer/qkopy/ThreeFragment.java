@@ -86,12 +86,6 @@ public class ThreeFragment extends Fragment {
          materialDesignFAM = (com.github.clans.fab.FloatingActionButton) gv.findViewById(R.id.fab);
         viewC=(RelativeLayout)gv.findViewById(R.id.viewC);
         viewA=(RelativeLayout)gv.findViewById(R.id.viewA);
-//        LayoutTransition lt = new LayoutTransition();
-//        lt.setDuration(50);
-//        lt.setStartDelay (LayoutTransition.APPEARING, 0 );
-//        lt.setStartDelay (LayoutTransition.DISAPPEARING, 0 );
-//        lt.setStartDelay (LayoutTransition.CHANGE_APPEARING, 0 );
-//        lt.setStartDelay (LayoutTransition.CHANGE_DISAPPEARING, 0 );
 
         animationDrawable = (AnimationDrawable) viewA.getBackground();
         animationDrawable.setEnterFadeDuration(3000);

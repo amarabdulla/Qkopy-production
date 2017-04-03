@@ -91,7 +91,7 @@ public class OneFragment extends Fragment implements SwipeRefreshLayout.OnRefres
 //            loadArray();
 //
 //        }else {
-            makeJSONGetRequest();
+//            makeJSONGetRequest();
             pref.edit().putString("cachingOn","false").commit();
 //        }
 //            System.out.print("");

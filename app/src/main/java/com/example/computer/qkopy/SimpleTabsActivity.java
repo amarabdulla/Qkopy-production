@@ -41,6 +41,13 @@ public class SimpleTabsActivity extends AppCompatActivity {
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+
+        Intent i = getIntent();
+        int tabToOpen = i.getIntExtra("ThirdTab", -1);
+        if (tabToOpen!=-1) {
+            viewPager.setCurrentItem(3);
+
+        }
     }
     
 

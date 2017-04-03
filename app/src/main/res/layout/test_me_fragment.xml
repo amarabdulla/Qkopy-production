@@ -115,7 +115,7 @@
             android:id="@+id/list"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="60dp"
             android:divider="@null" />
         <ImageView
             android:id="@+id/empty_bg"

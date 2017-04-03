@@ -81,7 +81,7 @@ public class MeFeedListAdapter extends BaseAdapter {
         imageLoader=new ImageLoader(context);
         final ImageView mapPreview= (ImageView) rowView.findViewById(R.id.feedImage1);
         if (!post_loc_list.get(position).equals("")){
-            String map="https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=400x250&sensor=false&maptype=roadmap&markers=color:red|"+post_loc_list.get(position);
+            String map="https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=400x280&sensor=false&maptype=roadmap&markers=color:red|"+post_loc_list.get(position);
             Glide.with(context).load(map).into(mapPreview);
         }
         if (!post_desc_list.get(position).equals("")){

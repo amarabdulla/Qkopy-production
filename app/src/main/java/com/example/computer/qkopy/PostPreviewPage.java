@@ -66,7 +66,7 @@ public class PostPreviewPage extends Activity implements
     private Spinner spinner1;
     private EditText editText;
     List<String> list;
-    String result,desc;
+    String result,desc,latitude,longitude,placename;
     int status_code;
     private static final String LOG_TAG ="POSTPREVEWPAGE";
     private static final String POST_URL="http://museon.net/qkopy-beta1/Auth/postfile";
@@ -138,9 +138,9 @@ public class PostPreviewPage extends Activity implements
             if (resultCode == RESULT_OK) {
                 Place place = PlacePicker.getPlace(data, this);
                 StringBuilder stBuilder = new StringBuilder();
-                String placename = String.format("%s", place.getName());
-                String latitude = String.valueOf(place.getLatLng().latitude);
-                String longitude = String.valueOf(place.getLatLng().longitude);
+                 placename = String.format("%s", place.getName());
+                 latitude = String.valueOf(place.getLatLng().latitude);
+                 longitude = String.valueOf(place.getLatLng().longitude);
                 String address = String.format("%s", place.getAddress());
                 stBuilder.append("Name: ");
                 stBuilder.append(placename);
@@ -154,7 +154,7 @@ public class PostPreviewPage extends Activity implements
                 stBuilder.append("Address: ");
                 stBuilder.append(address);
 //                Toast.makeText(getApplicationContext(),stBuilder.toString()+"",Toast.LENGTH_SHORT).show();
-                String s= "Hello"+" at "+address;
+                String s= ""+" at "+placename;
                 SpannableString ss1=  new SpannableString(s);
                 ss1.setSpan(new RelativeSizeSpan(1f), 0,5, 0); // set size
                 ss1.setSpan(new ForegroundColorSpan(Color.RED), 0, 5, 0);// set color
@@ -185,8 +185,9 @@ public class PostPreviewPage extends Activity implements
                     Toast.makeText(getApplicationContext(), "successful"
                             , Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(PostPreviewPage.this, SimpleTabsActivity.class);
-                    intent.putExtra("FirstTab", 3);
+                    intent.putExtra("ThirdTab", 3);
                     startActivity(intent);
+                    PostPreviewPage.this.finish();
                 } else if (status_code == 206) {
                     if (result == null) {
                         Toast.makeText(getApplicationContext(), "Something went wrong.Please try again", Toast.LENGTH_SHORT).show();
@@ -219,8 +220,9 @@ public class PostPreviewPage extends Activity implements
 
         MultipartEntity mpEntity = new MultipartEntity(HttpMultipartMode.BROWSER_COMPATIBLE);
             try {
-                mpEntity.addPart("id", new StringBody("137"));
+                mpEntity.addPart("id", new StringBody("151"));
                 mpEntity.addPart("post_desc", new StringBody(desc));
+                mpEntity.addPart("post_loc", new StringBody(latitude+","+longitude));
                 mpEntity.addPart("privacy", new StringBody("public"));
                 try {
 
